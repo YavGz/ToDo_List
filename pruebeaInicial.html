@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>React "Vanilla"</title>
+</head>
+<style>
+
+</style>
+<body>
+  
+  <!-- !!! Nota IMPORTRANTE: La siguiente forma de utilizar react es muy poco habitual !!! -->
+
+
+  <div id="root">
+  </div>
+  
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+  <!-- <script src="like_button.js"></script> -->
+  <script>
+
+    'use strict';
+
+    const e = React.createElement;
+
+    class LikeButton extends React.Component {
+      constructor(props) {
+        super(props);
+        this.state = { liked: false };
+      }
+
+      render() {
+        if (this.state.liked) {
+          return 'You liked this.';
+        }
+
+        return e(
+          'button',
+          { onClick: () => this.setState({ liked: true }) },
+          'Like'
+        );
+      }
+    }
+
+    // Forma antigua de renderizar 
+    // const root = document.getElementById("root")
+    // ReactDOM.render(e(LikeButton), root)
+
+    
+    const domContainer = document.getElementById("root");
+    const root = ReactDOM.createRoot(domContainer)
+    root.render(e(LikeButton))
+
+  </script>
+
+</body>
+</html>
