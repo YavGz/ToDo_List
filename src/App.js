@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import './Card.css'
 
 function App() {
   return (
@@ -17,7 +18,17 @@ function App() {
         >
           Learn React
         </a>
+
+        <div className="card-container">
+          <img src="" alt='imagen por preparar'></img>
+          <p>
+            La imagen aun no está definida
+          </p>
+        </div>
+
       </header>
+
+
     </div>
   );
 }
