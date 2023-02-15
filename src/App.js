@@ -8,7 +8,9 @@ import { CreateTodoButton } from './CreateTodoButton';
 
 const todos = [
   { text: 'Cortar cebolla', completed: false}, 
-  { text: 'Terminar este curso', completed: false}, 
+  { text: 'Terminar este curso', completed: false},
+  { text: 'Aprender a tocar el piano', completed: false},
+  { text: 'Montar una App para GTD', completed: false}
 ];
 
 
