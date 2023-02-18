@@ -1,0 +1,13 @@
+.createTodo {
+  width: 3rem;
+  height: 3rem;
+  position: fixed;
+  bottom: 1.5rem;
+  right: 0.5rem;
+  background-color: #6E6E6E;
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+}
