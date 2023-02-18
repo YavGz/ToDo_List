@@ -1,11 +1,12 @@
-import React from "react";
+import React from 'react';
+import './TodoItem.css'
 
 function TodoItem(props){
   return(
-      <li>
-          <span>C</span>
+      <li className='todoItem'>
+          <span></span>
           <p>{props.text}</p>
-          <span>X</span>
+          <span>.</span>
       </li>
   );
 }
