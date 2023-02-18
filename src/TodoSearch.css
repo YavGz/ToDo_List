@@ -1,0 +1,28 @@
+.todoSearch{
+  display: flex;
+  justify-content: center;
+  font-size: 1.4rem;
+  
+}
+.todoSearch input{
+  width: 18rem;
+  height: 2rem;
+  padding: 0 1rem;
+  justify-self: center;
+  background-color: #6E6E6E;
+  border: none;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+.todoSearch input::placeholder{
+  color: #fff;
+  opacity: 30%;
+}
+.todoSearch span {
+  width: 2.2rem;
+  height: 2rem;
+  margin-bottom: 1rem;
+  background-color: #343434;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}

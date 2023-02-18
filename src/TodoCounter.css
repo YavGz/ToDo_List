@@ -1,8 +1,11 @@
 .todoCounter {
+  width: 100%;
   font-size: 1.4rem;
   text-align: center;
 }
 .todoCounter_title {
+  width: 100%;
+  margin-bottom: 0;
   font-size: 2rem ;
   text-align: center;
 }

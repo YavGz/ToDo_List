@@ -2,6 +2,14 @@
   text-align: center;
 }
 
+#root{
+  width: 30rem;
+  margin: 0 auto;
+  display: grid;
+  justify-content: center;
+  position: relative;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

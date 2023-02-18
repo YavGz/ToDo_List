@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import './index.css';
 import { TodoCounter } from './TodoCounter.js'
 import { TodoSearch } from './TodoSearch';
 import { TodoList } from './TodoList';
@@ -20,7 +21,6 @@ function App() {
       <TodoCounter/>
 
       <TodoSearch/>
-      <input placeholder='cebolla'/>
       <TodoList>
         {todos.map( todo => (
           <TodoItem key={todo.text} text={todo.text } />
