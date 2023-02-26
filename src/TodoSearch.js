@@ -5,7 +5,7 @@ function TodoSearch(){
   return(
     <React.Fragment>
       <div className="todoSearch">
-        <input placeholder="Cebolla" />
+        <input placeholder="Buscar ToDo" />
         <span></span>
       </div>
     </React.Fragment>
