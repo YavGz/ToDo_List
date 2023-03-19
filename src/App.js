@@ -11,13 +11,8 @@ const todos = [
   { text: 'Cortar cebolla', completed: true}, 
   { text: 'Terminar esta clase', completed: true},
   { text: 'Terminar este curso', completed: false},
-  { text: 'Terminar este curso', completed: false},
-  { text: 'Terminar este curso', completed: false},
-  { text: 'Terminar este curso', completed: false},
-  { text: 'Terminar este curso', completed: false},
-  { text: 'Terminar este curso', completed: false},
-  // { text: 'Aprender a tocar el piano', completed: false},
-  // { text: 'Montar una App para GTD', completed: false}
+  { text: 'Aprender a tocar el piano', completed: false},
+  { text: 'Montar una App para GTD', completed: false}
 ];
 
 
@@ -35,8 +30,8 @@ function App() {
           completed={todo.completed} 
           />
           ) )} 
-        <CreateTodoButton/>
       </TodoList>
+      <CreateTodoButton/>
 
 
     </React.Fragment>
