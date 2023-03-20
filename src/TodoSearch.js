@@ -1,8 +1,7 @@
 import React from "react";
 import "./TodoSearch.css"
 
-function TodoSearch(){
-  const [SearchValue, setSearchValue] = React.useState('');
+function TodoSearch({searchValue, setSearchValue}){
 
   const onSearchValueChange = (event) => {
     console.log(event.target.value);
@@ -14,12 +13,10 @@ function TodoSearch(){
       <div className="todoSearch">
         <input 
           placeholder="Buscar ToDo" 
-          value={SearchValue}
+          value={searchValue}
           onChange={onSearchValueChange}
         />
-        <span></span>
       </div>
-      <p>{SearchValue}</p>
     </React.Fragment>
   );
 }

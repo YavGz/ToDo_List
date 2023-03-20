@@ -11,8 +11,9 @@
   justify-self: center;
   background-color: #6E6E6E;
   border: none;
-  border-top-left-radius: 0.5rem;
-  border-bottom-left-radius: 0.5rem;
+  border-radius: 0.5rem;
+  /* border-top-left-radius: 0.5rem; */
+  /* border-bottom-left-radius: 0.5rem; */
 }
 .todoSearch input:focus-visible {
   outline: 0;
@@ -23,7 +24,7 @@
   opacity: 30%;
   text-align: center;
 }
-.todoSearch span {
+/* .todoSearch span {
   width: 2.2rem;
   height: 2rem;
   margin-bottom: 1rem;
@@ -34,4 +35,4 @@
 .todoSearch span:hover {
   box-shadow: 0px 0px 2px 1px rgb(250 250 250 / 50%);
   cursor: pointer;
-}
+} */
