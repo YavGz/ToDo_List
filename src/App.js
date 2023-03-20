@@ -39,7 +39,18 @@ function App() {
     });
   }
 
-  // const [counterValue , setCounterValue] = React.useState();
+  const completeTodos = (text) => {
+    const todoIndex = todos.findIndex(todo => todo.text === text)
+    const newTodos = [...todos];
+    
+    if (!newTodos[todoIndex].completed) {
+      newTodos[todoIndex].completed = true;
+    } else {
+      newTodos[todoIndex].completed = false;
+    }    
+    
+    setTodos(newTodos);
+  }
   
   return (
     <React.Fragment>
@@ -57,7 +68,8 @@ function App() {
           <TodoItem 
           key={todo.text}
           text={todo.text}
-          completed={todo.completed} 
+          completed={todo.completed}
+          onComplete={() => completeTodos(todo.text)}
           />
           ) )} 
       </TodoList>
