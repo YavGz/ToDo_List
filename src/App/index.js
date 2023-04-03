@@ -1,14 +1,5 @@
 import React from 'react';
-// import './App.css';
-import './index.css';
-import { TodoCounter } from './TodoCounter.js'
-import { TodoSearch } from './TodoSearch';
-import { TodoList } from './TodoList';
-import { TodoItem } from './TodoItem';
-import { CreateTodoButton } from './CreateTodoButton';
-// import { ReactuseState } from 'react';
-
-
+import { AppUI } from './AppUI';
 
 const defaultTodos = [
   { text: 'Cortar cebolla', completed: true}, 
@@ -51,32 +42,25 @@ function App() {
     
     setTodos(newTodos);
   }
+
+  const deleteTodos = (text) => {
+    const todoIndex = todos.findIndex(todo => todo.text === text)
+    const newTodos = [...todos];
+    newTodos.splice(todoIndex, 1);
+    // el metodo splice nos pide donde empezar a hacer pop y cuantos elementos eliminará
+    setTodos(newTodos);
+  }
   
   return (
-    <React.Fragment>
-      <TodoCounter
-        total={totalTodos}
-        completed={completedTodos}
-      />
-
-      <TodoSearch
-        searchValue={SearchValue}
-        setSearchValue={setSearchValue}
-      />
-      <TodoList>
-        {searchedTodos.map( todo => (
-          <TodoItem 
-          key={todo.text}
-          text={todo.text}
-          completed={todo.completed}
-          onComplete={() => completeTodos(todo.text)}
-          />
-          ) )} 
-      </TodoList>
-      <CreateTodoButton/>
-
-
-    </React.Fragment>
+    <AppUI
+    totalTodos={totalTodos}
+    completedTodos={completedTodos}
+    SearchValue={SearchValue}
+    setSearchValue={setSearchValue}
+    searchedTodos={searchedTodos}
+    completeTodos={completeTodos}
+    deleteTodos={deleteTodos}
+    />
   );
 }
 

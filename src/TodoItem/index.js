@@ -3,10 +3,6 @@ import './TodoItem.css'
 
 function TodoItem(props){
 
-  const onDelete = () => {
-    alert(`Borraste el toDo ${props.text}`)
-  }
-
   return(
       <li className='todoItem'>
           <span
@@ -17,7 +13,7 @@ function TodoItem(props){
           <p className={`todoItem_p ${props.completed && 'todoItem_p__completed'}`} >{props.text}</p>
           <span
             className='todoItem_delete'
-            onClick={onDelete}
+            onClick={props.onDelete}
           >
             x
           </span>
