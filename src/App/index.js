@@ -2,6 +2,13 @@ import React from 'react';
 import { AppUI } from './AppUI';
 
 
+// const defaultTodos = [
+//   { text: 'Cortar cebolla', completed: true},
+//   { text: 'Terminar esta clase', completed: true},
+//   { text: 'Terminar este curso', completed: false},
+//   { text: 'Aprender a tocar el piano', completed: false},
+//   { text: 'Montar una App para GTD', completed: false}
+// ];
 
 function App() {
 
@@ -13,7 +20,7 @@ function App() {
     localStorage.setItem('TODOS_V1', JSON.stringify([]));
     parsedTodos = [];
   } else {
-    parsedTodos = JSON.parse(localStorage)
+    parsedTodos = JSON.parse(localStorageTodos)
   }
   
   
@@ -36,6 +43,12 @@ function App() {
     });
   }
 
+  function saveTodos (newTodos) {
+    const stringifiedTodos = JSON.stringify(newTodos);
+    localStorage.setItem('TODOS_V1', stringifiedTodos);
+    setTodos(newTodos);
+  }
+
   const completeTodos = (text) => {
     const todoIndex = todos.findIndex(todo => todo.text === text)
     const newTodos = [...todos];
@@ -46,7 +59,7 @@ function App() {
       newTodos[todoIndex].completed = false;
     }    
     
-    setTodos(newTodos);
+    saveTodos(newTodos);
   }
 
   const deleteTodos = (text) => {
@@ -54,7 +67,7 @@ function App() {
     const newTodos = [...todos];
     newTodos.splice(todoIndex, 1);
     // el metodo splice nos pide donde empezar a hacer pop y cuantos elementos eliminará
-    setTodos(newTodos);
+    saveTodos(newTodos);
   }
   
   return (
