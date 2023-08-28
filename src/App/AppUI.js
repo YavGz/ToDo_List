@@ -11,13 +11,16 @@ import { CreateTodoButton } from '../CreateTodoButton';
 
 
 function AppUI({
+  // props de componentes
+  loading,
+  error,
   totalTodos,
   completedTodos,
-  SearchValue,
+  SearchValue,  
   setSearchValue,
   searchedTodos,
-  completeTodos,
-  deleteTodos,
+  completeTodo,
+  deleteTodo,
 }) {
   return (
     <React.Fragment>
@@ -31,14 +34,20 @@ function AppUI({
         searchValue={SearchValue}
         setSearchValue={setSearchValue}
       />
+
       <TodoList>
+        {/* reenderizado de Array con sus metodos y propiedades */}
+        {/* cada elemento del array debe tener una key unica */}
+        {loading && <p className="loading"> Estamos cragando...</p>}
+        {error && <p className="error">Ha ocurrido un error! Recarga la pagina</p>}
+        {(!loading && searchedTodos.length === 0) && <p>Crea tu primer TODO!</p> }
         {searchedTodos.map( todo => (
           <TodoItem 
           key={todo.text}
           text={todo.text}
           completed={todo.completed}
-          onComplete={() => completeTodos(todo.text)}
-          onDelete={() => deleteTodos(todo.text)}
+          onComplete={() => completeTodo(todo.text)}
+          onDelete={() => deleteTodo(todo.text)}
           />
           ) )} 
       </TodoList>

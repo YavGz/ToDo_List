@@ -23,7 +23,7 @@ function CreateTodoButton (props){
 }
 
 /* todos los metodos que inician con "on" nos falicitan la implementacion
-de un eventListener (eventos).
+de un eventListener (eventos) Es necesario usar CamellCase.
 Para manejar los eventos hay que mandarle una funcion sin ejecutar al evento */
 
 export { CreateTodoButton };
