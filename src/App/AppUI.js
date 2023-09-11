@@ -7,6 +7,7 @@ import { TodoSearch } from '../TodoSearch';
 import { TodoList } from '../TodoList';
 import { TodoItem } from '../TodoItem';
 import { CreateTodoButton } from '../CreateTodoButton';
+import { TodoLoading } from "../TodoLoading";
 // import { ReactuseState } from 'react';
 
 
@@ -38,7 +39,7 @@ function AppUI({
       <TodoList>
         {/* reenderizado de Array con sus metodos y propiedades */}
         {/* cada elemento del array debe tener una key unica */}
-        {loading && <p className="loading"> Estamos cragando...</p>}
+        {loading && <TodoLoading/>}
         {error && <p className="error">Ha ocurrido un error! Recarga la pagina</p>}
         {(!loading && searchedTodos.length === 0) && <p>Crea tu primer TODO!</p> }
         {searchedTodos.map( todo => (
