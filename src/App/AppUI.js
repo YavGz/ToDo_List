@@ -13,27 +13,27 @@ import { TodoLoading } from "../TodoLoading";
 
 function AppUI({
   // props de componentes
-  loading,
-  error,
-  totalTodos,
-  completedTodos,
-  SearchValue,  
-  setSearchValue,
-  searchedTodos,
-  completeTodo,
-  deleteTodo,
+  // loading,
+  // error,
+  // totalTodos,
+  // completedTodos,
+  // SearchValue,  
+  // setSearchValue,
+  // searchedTodos,
+  // completeTodo,
+  // deleteTodo,
 }) {
   return (
     <React.Fragment>
 
       <TodoCounter
-        total={totalTodos}
-        completed={completedTodos}
+        // total={totalTodos}
+        // completed={completedTodos}
       />
 
       <TodoSearch
-        searchValue={SearchValue}
-        setSearchValue={setSearchValue}
+        // searchValue={SearchValue}
+        // setSearchValue={setSearchValue}
       />
 
       <TodoList>
