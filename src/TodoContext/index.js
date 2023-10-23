@@ -11,7 +11,7 @@ const TodoContext = React.createContext()
 // Al crear un provider personalizado podemos podemos encapsular aquella 
 // logica que querramos compartir entre componentes 
 
-function TodoProvider (params) {
+function TodoProvider ( {children} ) {
   
   const {
     item: todos,
@@ -57,8 +57,21 @@ function TodoProvider (params) {
   };
 
   return (
-    <TodoContext.Provider>
-
+    <TodoContext.Provider value={
+      // props de componentes
+      {
+        loading,
+        error,
+        totalTodos,
+        completedTodos,
+        searchValue, 
+        setSearchValue,
+        searchedTodos,
+        completeTodo,
+        deleteTodo,
+      }
+    }>
+      {children}
     </TodoContext.Provider>
   );
 };
