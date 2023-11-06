@@ -15,17 +15,9 @@ import { TodoContext } from "../TodoContext";
 function AppUI () {
   return (
     <React.Fragment>
-
       
-        <TodoCounter
-          // total={totalTodos}
-          // completed={completedTodos}
-        />
-
-        <TodoSearch
-          // searchValue={SearchValue}
-          // setSearchValue={setSearchValue}
-        />
+        <TodoCounter/>
+        <TodoSearch/>
 
         <TodoContext.Consumer>
           {({

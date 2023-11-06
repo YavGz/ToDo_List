@@ -70,7 +70,7 @@ function TodoProvider ( {children} ) {
         completeTodo,
         deleteTodo,
       }
-    }>
+      }>
       {children}
     </TodoContext.Provider>
   );

@@ -1,8 +1,12 @@
 import React from "react";
-import "./TodoSearch.css"
+import { TodoContext } from "../TodoContext";
+import "./TodoSearch.css";
+
 
 // Estado de react
-function TodoSearch({searchValue, setSearchValue}){
+function TodoSearch(){
+
+  const { searchValue, setSearchValue } = React.useContext(TodoContext);
 
   const onSearchValueChange = (event) => {
     // console.log(event.target.value);
@@ -20,6 +24,6 @@ function TodoSearch({searchValue, setSearchValue}){
       </div>
     </React.Fragment>
   );
-}
+};
 
 export { TodoSearch };
