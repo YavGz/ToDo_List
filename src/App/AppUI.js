@@ -8,26 +8,29 @@ import { TodoList } from '../TodoList';
 import { TodoItem } from '../TodoItem';
 import { CreateTodoButton } from '../CreateTodoButton';
 import { TodoLoading } from "../TodoLoading";
+import { Modal } from "../Modal/index.js";
 import { TodoContext } from "../TodoContext";
 // import { ReactuseState } from 'react';
 
 
 function AppUI () {
+
+  const {
+    loading,
+    error,
+    searchedTodos,
+    completeTodo,
+    deleteTodo,
+    openModal,
+  } = React.useContext(TodoContext)
+
   return (
     <React.Fragment>
       
         <TodoCounter/>
         <TodoSearch/>
 
-        <TodoContext.Consumer>
-          {({
-            loading,
-            error,
-            searchedTodos,
-            completeTodo,
-            deleteTodo,
-          }) => (
-            <TodoList>
+          <TodoList>
             {/* reenderizado de Array con sus metodos y propiedades */}
             {/* cada elemento del array debe tener una key unica */}
             {loading && <TodoLoading/>}
@@ -43,12 +46,15 @@ function AppUI () {
               />
               ) )} 
           </TodoList>
+          
+          <CreateTodoButton/>
+          
+          { openModal && (
+            <Modal>
+              Funcion de agregar todos
+            </Modal>
           )}
-        </TodoContext.Consumer>
-        
-        <CreateTodoButton/>
-
-
+          
     </React.Fragment>
   );
 };

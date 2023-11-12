@@ -2,12 +2,17 @@
   width: 3rem;
   height: 3rem;
   position: fixed;
-  bottom: 0.5rem;
-  right: 0.5rem;
-  background-color: #6E6E6E;
+  bottom: 0.8rem;
+  right: 0.8rem;
+  background-color: #0600c2;
   border: none;
   border-radius: 50%;
   color: #fff;
   font-size: 2rem;
   font-weight: bold;
+}
+.createTodo:hover {
+  cursor: pointer;
+  transform: rotate(360deg);
+  transition-duration: 250ms;
 }
