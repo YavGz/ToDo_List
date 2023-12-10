@@ -1,0 +1,80 @@
+form {
+  display: flex;
+  flex-wrap: wrap;
+  width: 30rem;
+  height: fit-content;
+  padding: 10px;
+  padding-top: 20px;
+  font-size: 20px;
+  border-radius: 10px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background-color: #9f9f9f;
+  /* color: 000; */
+}
+
+form label {
+  color: #000;
+  font-weight: 500;
+  font-size: 18px;
+  padding-bottom: 20px;
+}
+
+textarea {
+  width: 25rem;
+  max-width: 25rem;
+  height: fit-content;
+  min-height: 5rem;
+  margin: 10px auto;
+  font-size: 14px;
+  background-color: rgb(240, 240, 240);
+  border-radius: 5px;
+  border: none;
+}
+
+textarea::placeholder {
+  font-size: 14px;
+  text-align: center;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.TodoForm-buttonContainer {
+  display: flex;
+  width: 90%;
+  margin-bottom: 10px;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.TodoForm-button {
+  width: 12rem;
+  height: 3.5rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 3px;
+}
+
+.TodoForm-button--add {
+  color: #f3f3f3;
+  background-color: #0600c2;
+}
+
+.TodoForm-button:hover {
+  cursor: pointer;
+  box-shadow: 0 0 6px 0 #000;
+}
+
+.TodoForm-button--add:hover {
+  background-color: #1e17e9;
+}
+
+.TodoForm-button--cancel {
+  background-color: #9f9f9f;
+}
+
+.TodoForm-button--cancel:hover {
+  background-color: #f4f4f4;
+}
