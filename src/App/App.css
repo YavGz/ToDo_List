@@ -7,6 +7,7 @@
   margin: 0 auto;
   display: grid;
   justify-content: center;
+  justify-items: center;
   position: relative;
 }
 
@@ -42,5 +43,16 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media (min-width: 720px) {
+  #root{
+    display: grid;
+    width: 50rem;
+    margin: 10rem auto 0;
+    justify-content: center;
+    justify-items: center;
+    position: relative;
   }
 }

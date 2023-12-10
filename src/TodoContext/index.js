@@ -5,8 +5,8 @@ const TodoContext = React.createContext()
 
 // Tener React context nos permite utilizar los elementos para crar un 
 // proveedor y un consumidor del la logica de la app
-{/* <TodoContext.Provider></TodoContext.Provider>
-<TodoContext.Consumer></TodoContext.Consumer> */}
+/* <TodoContext.Provider></TodoContext.Provider>
+<TodoContext.Consumer></TodoContext.Consumer> */
 
 // Al crear un provider personalizado podemos podemos encapsular aquella 
 // logica que querramos compartir entre componentes 
@@ -21,7 +21,7 @@ function TodoProvider ( {children} ) {
   } = useLocalStorage('TODOS_V1', []);
 
   const [searchValue, setSearchValue] = React.useState('');
-  const [openModal, setOpenModal] = React.useState('true')
+  const [openModal, setOpenModal] = React.useState(false)
 
   const completedTodos = todos.filter(
     todo => !!todo.completed
@@ -41,7 +41,7 @@ function TodoProvider ( {children} ) {
     const todoIndex = newTodos.findIndex(
       (todo) => todo.text === text
     );
-    if (newTodos[todoIndex].completed == false) {
+    if (newTodos[todoIndex].completed === false) {
       newTodos[todoIndex].completed = true;
     } else {
       newTodos[todoIndex].completed = false;

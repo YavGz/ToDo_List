@@ -1,24 +1,23 @@
 import React from 'react';
 import './CreateTodoButton.css'
+import { TodoContext } from '../TodoContext';
 
-function CreateTodoButton (props){
-    /*const onAlert = () => {
-        alert('Aquí se deberia abrir el modal')
-    Metodo dos}*/
-
-    const onclickButton = (msg) => {
-        alert(msg);
-    } /*Metodo para llamar a la funcion alert de manera dinamica con diferentes mensajes*/
+function CreateTodoButton (){
+    const {
+        setOpenModal
+    } = React.useContext(TodoContext)
 
     return(
         <button
             className='createTodo'
             // onClick={ () =>  console.log('click')} Metodo simple
             /* onClick={ onAlert } Metodo dos (mas limpio)*/
-            onClick={ () => onclickButton('Aqui deberia abrir el modal') }
-            >
-                +
-        </button>
+            onClick={ 
+                () => {
+                    setOpenModal( state => !state)
+                } 
+            }
+        >+</button>
     );
 }
 
