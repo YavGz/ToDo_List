@@ -58,6 +58,15 @@ function TodoProvider ( {children} ) {
     saveTodos(newTodos);
   };
 
+  const addTodo = (text) => {
+    const newTodos = [...todos];
+    newTodos.push({
+      text,
+      completed: false,
+    })
+    saveTodos(newTodos)
+  }
+
   return (
     <TodoContext.Provider value={
       // props de componentes
@@ -71,6 +80,7 @@ function TodoProvider ( {children} ) {
         searchedTodos,
         completeTodo,
         deleteTodo,
+        addTodo,
         openModal,
         setOpenModal
       }
