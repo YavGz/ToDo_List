@@ -1,12 +1,66 @@
 .todoList {
-  width: 28rem;
+  width: 100%;
+  padding: 0.5rem;
   margin-bottom: 1rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  border-radius: 1rem;
+  box-shadow: inset 0px 0px 10px -5px rgba(255, 255, 255, 1);
 }
 .todoList ul{
+  width: 100%;
+  max-height: 39rem;
   list-style: none;
+  overflow-x: hidden;
+  overflow-y: scroll;
   padding: 0;
-  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  position: relative;
+}
+.todoList ul {
+  scrollbar-color: rgba(0, 255, 255, 0.39);
+}
+/* .todoList ul::-webkit-scrollbar {
+  background: rgba(0, 255, 255, 0.39);
+} */
+.todoList ul li:first-child {
+  margin-top: 0;
+}
+.todoList ul li:last-child {
+  margin-bottom: 0;
+}
+@media screen and (max-width: 425px) {
+  .todoList ul {
+    max-height: 50rem;
+    /* max-height: 35rem; */
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+}
+@media screen and (min-width: 426px) {
+  .todoList {
+    width: 35rem;
+    padding: 10px 1px;
+  }
+  .todoList ul {
+    width: 98%;
+    padding-left: 9px;
+    padding-right: 4px;
+  }
+  .todoList ul::-webkit-scrollbar {
+    position: absolute;
+    width: 5px;
+    background-color: rgba(0, 0, 0, 0);
+  }
+  
+  .todoList ul::-webkit-scrollbar-thumb {
+    width: 0.5rem;
+    background: rgba(0, 255, 255, 0.39);
+    border-radius: 0.5rem;
+  }
+  .todoList ul::-webkit-scrollbar-thumb:hover {
+    background: aqua;
+    cursor: pointer;
+  }
 }

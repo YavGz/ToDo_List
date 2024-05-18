@@ -24,7 +24,7 @@ form label {
 textarea {
   width: 25rem;
   max-width: 25rem;
-  height: fit-content;
+  form-sizing: content;
   min-height: 5rem;
   margin: 10px auto;
   font-size: 14px;

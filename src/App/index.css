@@ -1,7 +1,7 @@
 * {
   font-size: 62.5%;
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 body {
@@ -16,11 +16,22 @@ body {
 }
 
 #root {
-  width: 30rem;
-  margin: 0 auto;
+  width: 32rem;
+  height: min-content;
+  margin: 0;
+  margin-top: 0;
+  padding-bottom: 5rem;
   display: grid;
   justify-content: center;
   position: relative;
+}
+#modal .modal_background{
+  /* position: absolute; */
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
 }
 
 .loading, .error {
@@ -28,4 +39,7 @@ body {
 }
 .error {
   color: rgb(255, 119, 0);
+}
+.Anuncio {
+  font-size: 1.6rem;
 }

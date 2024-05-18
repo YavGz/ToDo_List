@@ -9,7 +9,7 @@ function TodoCounter() {
   return (
     <React.Fragment>
       <h1 className="todoCounter_title">
-        Bienvenido de vuelta, Usuario
+        Bienvenido de vuelta
         </h1>
       <h2 className="todoCounter">
         Has completado {completedTodos} de {totalTodos} Tareas

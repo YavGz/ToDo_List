@@ -2,18 +2,20 @@
   display: flex;
   justify-content: center;
   align-content: center;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  position: relative;
 }
 .todoSearch input{
-  width: 18rem;
-  height: 2rem;
+  width: 25rem;
+  height: 3rem;
   padding: 0 1rem;
-  justify-self: center;
-  background-color: #6E6E6E;
+  background-color: #6a6a6a;
+  color: #fff;
   border: none;
   border-radius: 0.5rem;
-  /* border-top-left-radius: 0.5rem; */
-  /* border-bottom-left-radius: 0.5rem; */
+  font-size: 1.6rem;
+  text-align: center;
 }
 .todoSearch input:focus-visible {
   outline: 0;
@@ -24,3 +26,8 @@
   opacity: 30%;
   text-align: center;
 }
+/* @media screen and (min-width: 320px;) {
+  .todoSearch {
+    right: 10%;
+  }
+} */
