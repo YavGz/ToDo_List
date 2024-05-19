@@ -24,23 +24,34 @@ function AppUI () {
     openModal,
     setOpenModal,
     totalTodos,
+    searchValue,
   } = React.useContext(TodoContext)
 
-  console.log(totalTodos);
+  // console.log(totalTodos);
   return (
     <React.Fragment>
       
         <TodoCounter/>
 
         <TodoSearch/>
-          
 
         <TodoList>
           {/* reenderizado de Array con sus metodos y propiedades */}
           {/* cada elemento del array debe tener una key unica */}
           {loading && <TodoLoading/>}
           {error && <p className="error">Ha ocurrido un error! Recarga la pagina</p>}
-          {(!loading && searchedTodos.length === 0 ) && <p className="Anuncio">Crea tu primer TODO!</p> }
+          {(!searchValue && totalTodos === 0) && 
+            <p className="Anuncio">Crea tu primer TODO!</p>}
+          
+          {/* { falta por crear funcionalidad de no match
+            (searchValue >=1 && searchedTodos.some.text !== searchValue ) &&
+            <p className="Anuncio">No hay coincidencias :c</p> */
+          }
+
+          {console.info(searchValue)}
+          {console.info(searchedTodos)}
+
+          {console.info(typeof(searchedTodos))}
           
           {searchedTodos.map( todo => (
             <TodoItem 
