@@ -28,6 +28,9 @@ function AppUI () {
   } = React.useContext(TodoContext)
 
   // console.log(totalTodos);
+
+  let someTodo = searchedTodos.map(todo => todo.text)
+
   return (
     <React.Fragment>
       
@@ -40,18 +43,13 @@ function AppUI () {
           {/* cada elemento del array debe tener una key unica */}
           {loading && <TodoLoading/>}
           {error && <p className="error">Ha ocurrido un error! Recarga la pagina</p>}
-          {(!searchValue && totalTodos === 0) && 
+          {(!loading && !searchValue && totalTodos === 0) && 
             <p className="Anuncio">Crea tu primer TODO!</p>}
           
-          {/* { falta por crear funcionalidad de no match
-            (searchValue >=1 && searchedTodos.some.text !== searchValue ) &&
-            <p className="Anuncio">No hay coincidencias :c</p> */
-          }
+          
+          {/* falta por crear funcionalidad de no match */}
 
-          {console.info(searchValue)}
-          {console.info(searchedTodos)}
-
-          {console.info(typeof(searchedTodos))}
+          {console.log( someTodo)}
           
           {searchedTodos.map( todo => (
             <TodoItem 
@@ -61,7 +59,10 @@ function AppUI () {
             onComplete={() => completeTodo(todo.text)}
             onDelete={() => deleteTodo(todo.text)}
             />
-            ) )} 
+            ))
+          }
+
+
         </TodoList>
         <CreateTodoButton setOpenModal= {setOpenModal} />
           

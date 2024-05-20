@@ -24,7 +24,7 @@ function TodoProvider ( {children} ) {
   const [openModal, setOpenModal] = React.useState(false)
 
   const completedTodos = todos.filter(
-    todo => !!todo.completed
+    todo => todo.completed
   ).length;
   const totalTodos = todos.length;
 
